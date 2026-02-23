@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stockX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .product {
+            display: inline-block;
+            width: 250px;
+            margin: 20px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            color: #333;
+        }
+        .product p {
+            color: #555;
+        }
+        .product button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>stockX</h1>
+        <p>by snntiagoxzz</p>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="travis.png" alt="Tenis 1">
+            <h3>Tenis Travis Scott Medium Olive</h3>
+            <p>Precio: Q3,400.00</p>
+            <button onclick="agregarCarrito('Travis Scott Medium Olive', 1,300)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Travis Scott Medium Olive')">Ver más opciones</button>
+        </div>
+        <div class="product">
+            <img src="travis2.png" alt="Tenis 2">
+            <h3>Tenis Travis Scott Velvet Brown</h3>
+            <p>Precio: Q2,565.00</p>
+            <button onclick="agregarCarrito('Travis Scott Velvet Brown', 7000)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Travis Scott Velvet Brown')">Ver más opciones</button>
+        </div>
+        <div class="product">
+            <img src="travis3.png" alt="Tenis 3">
+            <h3>Tenis Fragment x Travis Scott</h3>
+            <p>Precio: Q8,985.00</p>
+            <button onclick="agregarCarrito('Fragment x Travis Scott', 5000)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Fragment x Travis Scott')">Ver más opciones</button>
+        </div>
+        <div class="product">
+            <img src="travis4.png" alt="Tenis 3">
+            <h3>Travis Scott Black Phantom</h3>
+            <p>Precio: Q1,200.00</p>
+            <button onclick="agregarCarrito('Travis Scott Black Phantom', 3150)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Travis Scott Black Phantom')">Ver más opciones</button>
+        </div>
+        <div class="product">
+            <img src="ropa.png" alt="Tenis 3">
+            <h3>Travis Scott x Nike x FC Barcelona Retro 2000/01 Home Skeleton Jersey</h3>
+            <p>Precio: Q975.00</p>
+            <button onclick="agregarCarrito('Travis Scott Canary (Women's)', 1200)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Travis Scott Canary (Women's)')">Ver más opciones</button>
+        </div>
+        <div class="product">
+            <img src="bad1.png" alt="Tenis 3">
+            <h3>adidas Response CLBad Bunny Paso Fino</h3>
+            <p>Precio: Q1,065.00</p>
+            <button onclick="agregarCarrito('adidas Response CLBad Bunny Paso Fino', 4700)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('adidas Response CLBad Bunny Paso Fino')">Ver más opciones</button>
+        </div>
+       <div class="product">
+            <img src="bad2.png" alt="Tenis 3">
+            <h3>adidas Response CL Bad Bunny Wonder White</h3>
+            <p>Precio: Q2,265.00</p>
+            <button onclick="agregarCarrito('adidas Response CL Bad Bunny Wonder White', 3360)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('adidas Response CL Bad Bunny Wonder White')">Ver más opciones</button>
+        </div>
+       <div class="product">
+            <img src="bad3.png" alt="Tenis 3">
+            <h3>adidas Forum Buckle LowBad Bunny Blue Tint</h3>
+            <p>Precio: Q2,730.00</p>
+            <button onclick="agregarCarrito('adidas Forum Buckle LowBad Bunny Blue Tint', 1200)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('adidas Forum Buckle LowBad Bunny Blue Tint')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="bad4.png" alt="Tenis 3">
+            <h3>adidas Forum Buckle LowBad Bunny Last Forum</h3>
+            <p>Precio: Q2,130.00</p>
+            <button onclick="agregarCarrito('adidas Forum Buckle LowBad Bunny Last Forum', 4600)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('adidas Forum Buckle LowBad Bunny Last Forum')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="bad5.png" alt="Tenis 3">
+            <h3>adidas Forum LowBad Bunny</h3>
+            <p>Precio: Q9,593.00</p>
+            <button onclick="agregarCarrito('adidas Forum LowBad Bunny', 3000)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('adidas Forum LowBad Bunny')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="ess1.png" alt="Tenis 3">
+            <h3>Fear of God Essentials Fleece HoodieShell</h3>
+            <p>Precio: Q658.00</p>
+            <button onclick="agregarCarrito('Fear of God Essentials Fleece HoodieShell', 658)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Fear of God Essentials Fleece HoodieShell')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="ess2.png" alt="Tenis 3">
+            <h3>Fear of God Essentials Fleece Hoodie</h3>
+            <p>Precio: Q876.00</p>
+            <button onclick="agregarCarrito('Fear of God Essentials Fleece Hoodie', 876)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Fear of God Essentials Fleece Hoodie')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="ess3.png" alt="Tenis 3">
+            <h3>Fear of God Essentials Fleece Hoodie</h3>
+            <p>Precio: Q856.00</p>
+            <button onclick="agregarCarrito('Fear of God Essentials Fleece Hoodie', 856)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Fear of God Essentials Fleece Hoodie')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="ess4.png" alt="Tenis 3">
+            <h3>Fear of God Essentials Tee</h3>
+            <p>Precio: Q599.00</p>
+            <button onclick="agregarCarrito('Fear of God Essentials Tee', 599)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Fear of God Essentials Tee')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="ess5.png" alt="Tenis 3">
+            <h3>Fear of God Essentials Sweatshort </h3>
+            <p>Precio: Q570.00</p>
+            <button onclick="agregarCarrito('Fear of God Essentials Sweatshort ', 570)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Fear of God Essentials Sweatshort ')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="labu.png" alt="Tenis 3">
+            <h3>Pop Mart Labubu The Monsters Tasty Macarons Vinyl Face Sealed Case (6 Blind Boxes)</h3>
+            <p>Precio: Q2,800.00</p>
+            <button onclick="agregarCarrito('Pop Mart Labubu The Monsters Tasty Macarons Vinyl Face Sealed Case (6 Blind Boxes)', 2,800)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Pop Mart Labubu The Monsters Tasty Macarons Vinyl Face Sealed Case (6 Blind Boxes)')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="bubu.png" alt="Tenis 3">
+            <h3>Pop Mart Labubu The Monsters Have a Seat HEHE Vinyl Plush</h3>
+            <p>Precio: Q975.00</p>
+            <button onclick="agregarCarrito('Pop Mart Labubu The Monsters Have a Seat HEHE Vinyl Plush', 975)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Pop Mart Labubu The Monsters Have a Seat HEHE Vinyl Plush')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="bubu2.png" alt="Tenis 3">
+            <h3>Pop Mart Labubu The Monsters Fall In Wild Vinyl Plush Doll Pendant Keychain</h3>
+            <p>Precio: Q248.00</p>
+            <button onclick="agregarCarrito('Pop Mart Labubu The Monsters Fall In Wild Vinyl Plush Doll Pendant Keychain', 248)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Pop Mart Labubu The Monsters Fall In Wild Vinyl Plush Doll Pendant Keychain')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="bubu3.png" alt="Tenis 3">
+            <h3>Pop Mart Labubu The Monsters Tasty Macarons Chestnut Cocoa Vinyl Plush Pendant</h3>
+            <p>Precio: Q700.00</p>
+            <button onclick="agregarCarrito('Pop Mart Labubu The Monsters Tasty Macarons Chestnut Cocoa Vinyl Plush Pendant', 700)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Pop Mart Labubu The Monsters Tasty Macarons Chestnut Cocoa Vinyl Plush Pendant')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="bubu4.png" alt="Tenis 3">
+            <h3>Pop Mart Labubu The Monsters Tasty Macarons Sea Salt Cocount Vinyl Plush Pendant</h3>
+            <p>Precio: Q600.00</p>
+            <button onclick="agregarCarrito('Pop Mart Labubu The Monsters Tasty Macarons Sea Salt Cocount Vinyl Plush Pendant', 600)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Pop Mart Labubu The Monsters Tasty Macarons Sea Salt Cocount Vinyl Plush Pendant')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="club.png" alt="Tenis 3">
+            <h3>Stussy 8 Ball Pigment Dyed Hoodie</h3>
+            <p>Precio: Q876.00</p>
+            <button onclick="agregarCarrito('Stussy 8 Ball Pigment Dyed Hoodie', 876)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Stussy 8 Ball Pigment Dyed Hoodie')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="club2.png" alt="Tenis 3">
+            <h3>Stussy Basic T-shirt</h3>
+            <p>Precio: Q416.00</p>
+            <button onclick="agregarCarrito('Stussy Basic T-shirt', 416)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Stussy Basic T-shirt')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="club3.png" alt="Tenis 3">
+            <h3>Nike x Stussy Knit Sweater</h3>
+            <p>Precio: Q1,360.00</p>
+            <button onclick="agregarCarrito('Nike x Stussy Knit Sweater', 1360)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Nike x Stussy Knit Sweater')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="club4.png" alt="Tenis 3">
+            <h3>Anti Social Social Club Cancelled T-shirt</h3>
+            <p>Precio: Q416.00</p>
+            <button onclick="agregarCarrito('Anti Social Social Club Cancelled T-shirt', 416)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Anti Social Social Club Cancelled T-shirt')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="club5.png" alt="Tenis 3">
+            <h3>Anti Social Social Club Cancelled</h3>
+            <p>Precio: Q472.00</p>
+            <button onclick="agregarCarrito('Anti Social Social Club Cancelled', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('Anti Social Social Club Cancelled')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="gorra.png" alt="Tenis 3">
+            <h3>GORRA DANDY HATS x Junior H CLAVE ALI</h3>
+            <p>Precio: Q1,472.00</p>
+            <button onclick="agregarCarrito('GORRA DANDY HATS x Junior H CLAVE ALI', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('GORRA DANDY HATS x Junior H CLAVE ALI')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="uno.png" alt="Tenis 3">
+            <h3>Gorra Dandy Hats Los Angeles Stay Out Negro Ajustable Lis</h3>
+            <p>Precio: Q1,250.00</p>
+            <button onclick="agregarCarrito('GORRA DANDY HATS "D" PHANTOM ALL BLACK', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('GORRA DANDY HATS "D" PHANTOM ALL BLACK')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="dos.png" alt="Tenis 3">
+            <h3>Dandy Hats Los Angeles Dandy Club</h3>
+            <p>Precio: Q1,100.00</p>
+            <button onclick="agregarCarrito('GORRA EL BARBAS HATS “CHROME VI”', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('GORRA EL BARBAS HATS “CHROME VI”')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="tres.png" alt="Tenis 3">
+            <h3>Mago Total Black — Mago Forever</h3>
+            <p>Precio: Q895.00</p>
+            <button onclick="agregarCarrito('GORRA EL BARBAS HATS “NO FRIENDS IN THIS INDUSTRY”', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('GORRA EL BARBAS HATS “NO FRIENDS IN THIS INDUSTRY”')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="barba3.png" alt="Tenis 3">
+            <h3>Barbas Hats x CT "ROCKSTAR”</h3>
+            <p>Precio: Q2,472.00</p>
+            <button onclick="agregarCarrito('GORRA GOAT HATS "DREAMS"', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('GORRA GOAT HATS "DREAMS"')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="barba2.png" alt="Tenis 3">
+            <h3>Gorra Barbas Hats x CT "GALAXY CT" GOLD 24K PLATED</h3>
+            <p>Precio: Q1,872.00</p>
+            <button onclick="agregarCarrito('DANDY Drop USA', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('DANDY Drop USA')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="barba.png" alt="Tenis 3">
+            <h3>CT Racing — El Barbas Hats x CT</h3>
+            <p>Precio: Q1,600.00</p>
+            <button onclick="agregarCarrito('FR DANDY', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('FR DANDY')">Ver más opciones</button>
+        </div>
+ <div class="product">
+            <img src="barba1.png" alt="Tenis 3">
+            <h3>El Barbas Hats x Rich the Kid — Rich 4ever</h3>
+            <p>Precio: Q1,095.00</p>
+            <button onclick="agregarCarrito('GORRA EL BARBAS HATS "LR CHROME" Limited edition', 472)">Agregar al carrito</button>
+            <br><br>
+            <button onclick="verMas('GORRA EL BARBAS HATS "LR CHROME" Limited edition')">Ver más opciones</button>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 14/02/2026 proximamente...</p>
+    </footer>
+
+    <script>
+        function agregarCarrito(nombre, precio) {
+            alert(`Has agregado ${nombre} al carrito. Precio: $${precio}`);
+        }
+
+        function verMas(nombre) {
+            alert(`Ver más opciones para: ${nombre}`);
+        }
+    </script>
+</body>
+</html>
